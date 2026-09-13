@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CV Cipta Pratama Mandiri</title>
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f4f7fc;
+            color: #1e2a3a;
+            line-height: 1.6;
+        }
+
+        /* === HEADER / NAVBAR === */
+        header {
+            background: #0a2a44;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* === LOGO IMAGE === */
+        .logo-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(249, 184, 27, 0.4);
+            border: 2px solid #f9b81b;
+            flex-shrink: 0;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .logo-text h1 span {
+            color: #f9b81b;
+        }
+        .logo-text small {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: #b0cce6;
+        }
+
+        nav a {
+            color: #f0f7ff;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+        nav a:hover {
+            border-bottom-color: #f9b81b;
+            color: #f9b81b;
+        }
+
+        /* === HERO === */
+        .hero {
+            background: linear-gradient(135deg, #0a2a44 0%, #1d4a7a 100%);
+            color: #fff;
+            padding: 5rem 2rem;
+            text-align: center;
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* GAMBAR HERO */
+        .hero-image {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            border: 3px solid rgba(249, 184, 27, 0.3);
+            display: block;
+        }
+
+        /* === LOGO DI HERO === */
+        .hero-logo-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f9b81b;
+            box-shadow: 0 4px 20px rgba(249, 184, 27, 0.5);
+            flex-shrink: 0;
+        }
+
+        .hero-logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+            background: rgba(255,255,255,0.08);
+            padding: 1rem 2.5rem;
+            border-radius: 80px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .hero-logo .hero-text {
+            text-align: left;
+            line-height: 1.2;
+        }
+        .hero-logo .hero-text .name {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .hero-logo .hero-text .name span {
+            color: #f9b81b;
+        }
+        .hero-logo .hero-text .tag {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+        .hero h2 i {
+            color: #f9b81b;
+            margin-right: 10px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 750px;
+            margin: 1.2rem auto;
+            opacity: 0.9;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #f9b81b;
+            color: #0a2a44;
+            padding: 0.6rem 2.5rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* === LAYOUT UMUM === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #f9b81b;
+            margin-top: 6px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: 0.25s ease;
+            border: 1px solid #e6edf5;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(10,42,68,0.12);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0a2a44, #1d4a7a);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #f9b81b;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .card p {
+            color: #3e4e62;
+        }
+
+        /* === TENTANG + MISI === */
+        .about-highlight {
+            background: #e7eff8;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .highlight-item .icon-box {
+            width: 44px;
+            height: 44px;
+            background: #0a2a44;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f9b81b;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        /* === LOGO KECIL UNTUK CARD === */
+        .logo-small {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #f9b81b;
+        }
+
+        /* === LAYANAN / PROSES === */
+        .step-number {
+            display: inline-block;
+            background: #0a2a44;
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 700;
+            padding: 0.2rem 1rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        /* === TABEL ARMADA === */
+        .table-wrap {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 16px;
+            padding: 0.5rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+        th {
+            background: #0a2a44;
+            color: #fff;
+            padding: 1rem 1rem;
+            text-align: left;
+        }
+        td {
+            padding: 1rem 1rem;
+            border-bottom: 1px solid #dee8f2;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .status-badge {
+            background: #d4edda;
+            color: #0e5e2e;
+            padding: 0.2rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        /* === HUBUNGI === */
+        .contact-info {
+            background: #0a2a44;
+            color: #fff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contact-info .item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .contact-info .item .circle-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(249, 184, 27, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: #f9b81b;
+            border: 2px solid rgba(249, 184, 27, 0.3);
+            transition: 0.3s ease;
+            text-decoration: none;
+        }
+        .contact-info .item .circle-icon:hover {
+            transform: scale(1.05);
+        }
+        /* Warna hijau WhatsApp */
+        .contact-info .item .circle-icon.whatsapp {
+            background: rgba(37, 211, 102, 0.2);
+            border-color: rgba(37, 211, 102, 0.3);
+        }
+        .contact-info .item .circle-icon.whatsapp:hover {
+            background: #25D366;
+            border-color: #25D366;
+            color: #fff;
+        }
+        /* Warna merah Gmail */
+        .contact-info .item .circle-icon.gmail {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .contact-info .item .circle-icon.gmail:hover {
+            background: #D44638;
+            border-color: #D44638;
+            color: #fff;
+        }
+        /* Warna Google Maps */
+        .contact-info .item .circle-icon.maps {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .contact-info .item .circle-icon.maps:hover {
+            background: #4285F4;
+            border-color: #4285F4;
+            color: #fff;
+        }
+
+        .contact-info .item a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .contact-info .item a:hover {
+            color: #f9b81b;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background: #081e32;
+            color: #b6ccdf;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            border-top: 2px solid #1d4a7a;
+        }
+        footer strong {
+            color: #f9b81b;
+        }
+
+        /* === LOGO FOOTER === */
+        .footer-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #f9b81b;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 900px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap: 0.8rem;
+                text-align: center;
+            }
+            .logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 0.8rem;
+            }
+            .hero {
+                padding: 3rem 1.5rem;
+                min-height: 70vh;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .hero-image {
+                max-width: 100%;
+            }
+            .hero-logo {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.2rem;
+            }
+            .hero-logo .hero-text {
+                text-align: center;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: flex-start;
+            }
+        }
+        @media (max-width: 480px) {
+            .logo-text h1 { font-size: 1.4rem; }
+            .hero h2 { font-size: 1.6rem; }
+            .hero p { font-size: 1rem; }
+            .container { padding: 1rem; }
+            .hero-logo .hero-text .name { font-size: 1.3rem; }
+            .hero {
+                padding: 2rem 1rem;
+                min-height: 60vh;
+            }
+            .hero-image {
+                border-radius: 12px;
+                margin-bottom: 1.5rem;
+            }
+            .hero-logo-image {
+                width: 60px;
+                height: 60px;
+            }
+            .logo-image {
+                width: 50px;
+                height: 50px;
+            }
+            .contact-info .item .circle-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img 
+            src="assets/images/logo-cpm-header.png" 
+            alt="Logo CV Cipta Pratama Mandiri"
+            class="logo-image"
+        />
+        <div class="logo-text">
+            <h1>CV Cipta Pratama Mandiri</h1>
+            <small>Pengiriman Ke Seluruh Area Indonesia</small>
+        </div>
+    </div>
+    <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#armada">Armada</a>
+        <a href="#hubungi">Hubungi</a>
+    </nav>
+</header>
+
+<!-- HERO dengan GAMBAR -->
+<section class="hero">
+    <img 
+        src="assets/images/hero-truck.jfif" 
+        alt="CV Cipta Pratama Mandiri - Armada Pengiriman Jawa Barat Sumatera"
+        class="hero-image"
+    />
+
+    <div class="hero-content">
+        <div class="hero-logo">
+            <img 
+                src="assets/images/logo-cpm-hero.png" 
+                alt="Logo CV Cipta Pratama Mandiri"
+                class="hero-logo-image"
+            />
+            <div class="hero-text">
+                <div class="name">CV Cipta Pratama Mandiri</div>
+                <div class="tag">LOGISTIK &amp; EKSPEDISI</div>
+            </div>
+        </div>
+        <h2><i class="fas fa-arrow-right"></i>Pengiriman Ke Seluruh Area Indonesia</h2>
+        <p>Mitra terpercaya pengiriman ke seluruh area indonesia. 
+           Menyediakan armada siap muat, diantar ke pabrik, dan dikirim ke tujuan.</p>
+        <div class="badge"><i class="fas fa-check-circle"></i> 100+ Armada Aktif</div>
+    </div>
+</section>
+
+<!-- TENTANG -->
+<div class="container" id="tentang">
+    <h2 class="section-title">Tentang Perusahaan</h2>
+    <div class="about-highlight">
+        <div class="grid-2">
+            <div>
+                <h3>
+                    <img 
+                        src="assets/images/logo-cpm-tentang.png" 
+                        alt="Logo"
+                        class="logo-small"
+                        style="vertical-align:middle; margin-right:8px;"
+                    />
+                    CV Cipta Pratama Mandiri
+                </h3>
+                <p style="margin-top:0.8rem; font-size:1.05rem;">
+                    Kami adalah perusahaan pengiriman barang (ekspedisi) yang berfokus pada 
+                    rute seluruh Area Indonesia. Kami melayani pabrik-pabrik 
+                    yang membutuhkan pengiriman barang dalam jumlah besar dan kecil dengan jadwal teratur.
+                </p>
+                <div class="highlight-item">
+                    <div class="icon-box">→</div>
+                    <span><strong>Tujuan Utama:</strong> Seluruh Area Di Indonesia (Sumatra, Jawa, Bali, Kalimantan dan Kota kota lainnya diindonesia)</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="icon-box">📦</div>
+                    <span><strong>Pekerjaan:</strong> Pengiriman barang &amp; penyedia armada .</span>
+                </div>
+            </div>
+            <div>
+                <h3>
+                    <span style="display:inline-block;background:#0a2a44;color:#f9b81b;width:36px;height:36px;border-radius:10px;text-align:center;line-height:36px;font-weight:800;margin-right:8px;">🎯</span> 
+                    Misi Kami
+                </h3>
+                <ul style="list-style: none; margin-top: 0.8rem;">
+                    <li style="margin-bottom:0.7rem;">✓ Menyediakan armada sesuai tujuan yang ditentukan pabrik.</li>
+                    <li style="margin-bottom:0.7rem;">✓ Mengirim barang tepat waktu sesuai alamat tujuan.</li>
+                    <li style="margin-bottom:0.7rem;">✓ Menyediakan armada berkualitas (truk, tronton & colt diesel).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LAYANAN / PROSES -->
+<div class="container" id="layanan">
+    <h2 class="section-title">Bagaimana Kami Bekerja</h2>
+    <div class="grid-3">
+        <div class="card">
+            <span class="step-number">Langkah 1</span>
+            <div class="card-icon">📋</div>
+            <h3>Pendaftaran Armada</h3>
+            <p>Kami mendaftarkan armada berdasarkan tujuan yang ditentukan oleh pabrik.</p>
+        </div>
+        <div class="card">
+            <span class="step-number">Langkah 2</span>
+            <div class="card-icon">⌛</div>
+            <h3>Menunggu Informasi Pengiriman</h3>
+            <p>Menunggu informasi pengiriman dari pabrik.</p>
+        </div>
+        <div class="card">
+            <span class="step-number">Langkah 3</span>
+            <div class="card-icon">📦</div>
+            <h3>Menyediakan Armada</h3>
+            <p>Menyediakan armada sesuai kebutuhan pabrik.</p>
+        </div>
+        <div class="card">
+            <span class="step-number">Langkah 4</span>
+            <div class="card-icon">🚛</div>
+            <h3>Pengiriman Armada Ke Pabrik</h3>
+            <p>Pengiriman armada sesuai tujuan pengiriman dari pabrik.</p>
+        </div>
+        <div class="card">
+            <span class="step-number">Langkah 5</span>
+            <div class="card-icon">🚚</div>
+            <h3>Proses Muat</h3>
+            <p>Proses muat dilakukan di pabrik dilengkapi dengan dokumen pengiriman produk dari pabrik.</p>
+        </div>
+        <div class="card">
+            <span class="step-number">Langkah 6</span>
+            <div class="card-icon">👀</div>
+            <h3>Pengawasan Perjalanan</h3>
+            <p>Pengawasan selama di perjalanan sampai tempat tujuan pengiriman dilakukan secara berkala.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- ARMADA -->
+<div class="container" id="armada">
+    <h2 class="section-title">Armada Tersedia</h2>
+    <p style="margin-bottom:1.5rem;">Kami menyediakan berbagai jenis armada yang siap mengirim barang ke Seluruh area di Indonesia.</p>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Jenis Armada</th>
+                    <th>Kapasitas (ton)</th>
+                    <th>Rute Tujuan</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span style="display:inline-block;background:#0a2a44;color:#f9b81b;width:28px;height:28px;border-radius:6px;text-align:center;line-height:28px;font-weight:700;font-size:0.8rem;margin-right:8px;">T</span> Truk Engkel</td>
+                    <td>5 - 8 ton</td>
+                    <td>Seluruh Indonesia</td>
+                    <td><span class="status-badge"><i class="fas fa-check-circle"></i> Siap</span></td>
+                </tr>
+                <tr>
+                    <td><span style="display:inline-block;background:#0a2a44;color:#f9b81b;width:28px;height:28px;border-radius:6px;text-align:center;line-height:28px;font-weight:700;font-size:0.8rem;margin-right:8px;">T</span> Tronton</td>
+                    <td>15 - 20 ton</td>
+                    <td>Seluruh Indonesia</td>
+                    <td><span class="status-badge"><i class="fas fa-check-circle"></i> Siap</span></td>
+                </tr>
+                <tr>
+                    <td><span style="display:inline-block;background:#0a2a44;color:#f9b81b;width:28px;height:28px;border-radius:6px;text-align:center;line-height:28px;font-weight:700;font-size:0.8rem;margin-right:8px;">T</span> Colt Diesel</td>
+                    <td>2 - 5 ton</td>
+                    <td>Seluruh Indonesia</td>
+                    <td><span class="status-badge"><i class="fas fa-check-circle"></i> Siap</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="margin-top:1rem; font-style:italic; color:#3e5a72;">
+        <i class="fas fa-info-circle"></i> Armada didaftarkan sesuai permintaan pabrik.
+    </p>
+</div>
+
+<!-- KEUNGGULAN -->
+<div class="container">
+    <h2 class="section-title">Mengapa Memilih CPM?</h2>
+    <div class="grid-3">
+        <div class="card">
+            <div class="card-icon">🚚</div>
+            <h3>Pengiriman Keseluruh Area Indonesia</h3>
+            <p>Pengiriman terjadwal sesuai permintaan pabrik, sampai tepat waktu ke Seluruh Area Indonesia.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>Armada Terawat</h3>
+            <p>Semua kendaraan dalam kondisi prima, Karena servis rutin berkala, sehingga siap muat barang dengan aman.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🤝</div>
+            <h3>Koordinasi dengan Pabrik</h3>
+            <p>Kami berkomunikasi aktif untuk menentukan jadwal muat dan tujuan akhir.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🆓</div>
+            <h3>Armada Tersertifikasi halal</h3>
+            <p>Kami (staff dan crew armada) sering mengikuti pelatihan sertifikasi halal secara rutin dan berkala sesuai aturan pemerintah. dan perlakuan armada terstandar verifikasi halal.</p>
+        </div>
+    </div>
+</div>
+
+<!-- HUBUNGI -->
+<div class="container" id="hubungi">
+    <h2 class="section-title">Hubungi Kami</h2>
+    <div class="contact-info">
+        <!-- WHATSAPP -->
+        <div class="item">
+            <a href="https://wa.me/6281221747477" target="_blank" class="circle-icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <div>
+                <strong>WhatsApp</strong><br>
+                <a href="https://wa.me/6281221747477" target="_blank">+62 812-2174-7477</a>
+            </div>
+        </div>
+        <!-- GMAIL -->
+        <div class="item">
+            <a href="mailto:info@ciptapratama.co.id" class="circle-icon gmail">
+                <i class="fab fa-google"></i>
+            </a>
+            <div>
+                <strong>Gmail</strong><br>
+                <a href="mailto:ciptapratamamandiri3@gmail.com">ciptapratamamandiri3@gmail.com</a>
+            </div>
+        </div>
+        <!-- GOOGLE MAPS -->
+        <div class="item">
+            <a href="https://maps.app.goo.gl/Pscb3e6Sujmp9nHj7" target="_blank" class="circle-icon maps">
+                <i class="fas fa-map-marker-alt"></i>
+            </a>
+            <div>
+                <strong>Google Maps</strong><br>
+                <a href="https://maps.app.goo.gl/Pscb3e6Sujmp9nHj7" target="_blank">
+                    Griya Prima Alam Asri, Blok G2. No. 2 RT 5, RW 12
+                </a>
+            </div>
+        </div>
+    </div>
+    <p style="margin-top:1.5rem; background:#fff; padding:1rem 2rem; border-radius:30px; text-align:center; border:1px solid #e6edf5;">
+        <img 
+            src="assets/images/logo-cpm-hubungi.png" 
+            alt="Logo"
+            style="width:32px;height:32px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:8px;border:2px solid #f9b81b;"
+        />
+        Siap mengirim barang dari ke seluruh area Indonesia. 
+        <strong>Percayakan pengiriman Barang Anda pada CPM!</strong>
+    </p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        <img 
+            src="assets/images/logo-cpm-tentang.png" 
+            alt="Logo CV Cipta Pratama Mandiri"
+            class="footer-logo"
+        />
+        &copy; 2008 - 2026 CV <strong>Cipta Pratama Mandiri</strong> — 
+        Pengiriman Ke Seluruh Area Indonesia &nbsp;|&nbsp; 
+        Armada siap sesuai permintaan pabrik
+    </p>
+    <p style="margin-top:0.5rem; font-size:0.9rem;">
+        <i class="fas fa-check-circle" style="color:#f9b81b;"></i> 
+        Melayani pengiriman ke Sumatra, Jawa, Bali, Kalimantan dan Kota kota lainnya diindonesia.
+    </p>
+</footer>
+
+</body>
+</html>
